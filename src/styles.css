@@ -840,3 +840,19 @@ button {
     grid-template-columns: 1fr;
   }
 }
+
+.form-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.secondary-button {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.form-feedback.success {
+  color: #4ade80;
+}
