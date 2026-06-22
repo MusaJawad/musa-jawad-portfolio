@@ -86,8 +86,8 @@ export default function App() {
         <section id="feedback" className="section container compact-section">
           <div className="section-kicker">Client feedback</div>
           <div className="section-headline simple-headline">
-            <h2>5-star feedback from past web development projects and internships</h2>
-            <p>Feedback from internship projects involving website development, performance optimization, and page creation.</p>
+            <h2>5-star feedback from past web development projects.</h2>
+            <p>Feedback from internship/client-style projects involving website development, performance optimization, and page creation.</p>
           </div>
           <ClientFeedback testimonials={testimonials} />
         </section>
