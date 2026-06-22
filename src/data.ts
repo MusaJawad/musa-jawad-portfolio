@@ -6,7 +6,7 @@ export const profile: Profile = {
   location: 'Calgary, AB, Canada',
   email: 'musajawad72@gmail.com',
   linkedin: 'https://www.linkedin.com/in/musa-jawad-208807239',
-  github: 'https://github.com/your-github-handle',
+  github: 'https://github.com/MusaJawad',
   resume: '/Musa_Jawad_Resume.pdf',
   availability: 'Open to junior backend, full-stack, Django, automation, and data/AI roles',
   intro:
