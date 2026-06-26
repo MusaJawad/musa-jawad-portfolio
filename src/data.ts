@@ -352,8 +352,8 @@ export const testimonials: Testimonial[] = [
     quote: 'Great work again!',
     author: 'Kyle Lacroix',
     role: 'Employer',
-    organization: 'Level UP Cohort',
-    project: 'Website Page Creation',
+    organization: 'Self Justice',
+    project: 'Website Development / Backend Features',
     date: 'March 29, 2024',
   },
 ];
