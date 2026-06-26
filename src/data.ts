@@ -2,15 +2,15 @@ import type { Experience, Profile, Project, Skill, Testimonial } from './types';
 
 export const profile: Profile = {
   name: 'Musa Jawad',
-  title: 'Backend / Full-Stack Software Engineer',
+  title: 'Full-Stack Software Developer',
   location: 'Calgary, AB, Canada',
   email: 'musajawad72@gmail.com',
   linkedin: 'https://www.linkedin.com/in/musa-jawad-208807239',
   github: 'https://github.com/MusaJawad',
   resume: '/Musa_Jawad_Resume.pdf',
-  availability: 'Open to junior backend, full-stack, Django, automation, and data/AI roles',
+  availability: 'Open to junior full-stack, backend, Django, automation, and data/AI roles',
   intro:
-    'I build API-driven web apps, automation tools, and data/AI projects using Python, Django, JavaScript/TypeScript, SQL, and React. This site collects my project walkthroughs, screenshots, reports, demo videos, and technical breakdowns in one place.',
+    'I build production web platforms, API-driven applications, automation tools, and data/AI projects using Python, Django, JavaScript/TypeScript, SQL, React, and Node.js. My experience includes launching a company website from 0 to 1, building backend features for user-facing platforms, and creating technical projects with OCR, WebSockets, Firebase, and distributed-systems concepts.',
 };
 
 export const projects: Project[] = [
@@ -140,7 +140,7 @@ export const projects: Project[] = [
     ],
     evidence: ['Demo video', 'Screen captures', 'Bilingual/navigation flows'],
     featured: true,
-    order: 3,
+    order: 5,
     year: '2025',
   },
   {
@@ -168,7 +168,7 @@ export const projects: Project[] = [
     ],
     evidence: ['Technical report', 'Slide deck', 'MRI result visuals'],
     featured: true,
-    order: 4,
+    order: 6,
     year: '2025',
   },
   {
@@ -193,7 +193,7 @@ export const projects: Project[] = [
     links: [{ label: 'Research report', href: '/assets/reports/cloud-ml-performance-report.pdf' }],
     evidence: ['Research report', 'Training/inference charts', 'Cloud platform comparison'],
     featured: true,
-    order: 5,
+    order: 7,
     year: '2025',
   },
   {
@@ -218,14 +218,67 @@ export const projects: Project[] = [
     links: [],
     evidence: ['Django models', 'Admin panel', 'REST API endpoints'],
     featured: true,
-    order: 6,
+    order: 8,
     year: '2026',
   },
+
+  {
+  id: 8,
+  title: 'IntelliPK Business Website',
+  slug: 'intellipk-business-website',
+  tagline:
+    'Production business website for a Pakistan-based water filtration company, built from 0 to 1 with responsive design, deployment, SEO, and founder-facing digital strategy.',
+  summary:
+    'Built and launched intellipk.com as the company’s first public website, helping establish a professional online presence for water filtration products and services.',
+  problem:
+    'The company needed a credible public website to explain its products and services, build trust with customers, and create a professional online presence from scratch.',
+  solution:
+    'Designed and launched a responsive website with clear site architecture, product/service content, customer messaging, domain/hosting setup, deployment, and technical SEO basics.',
+  impact:
+    'Created the company’s first public website from 0 to 1 and gave the founder a professional digital presence for product discovery, customer trust, and ongoing updates.',
+  stack: 'Web Development, Responsive Design, HTML/CSS, JavaScript, SEO, Deployment, Domain/Hosting',
+  stack_list: [
+    'Web Development',
+    'Responsive Design',
+    'HTML/CSS',
+    'JavaScript',
+    'SEO',
+    'Deployment',
+    'Domain/Hosting',
+  ],
+  github_url: '',
+  demo_url: 'https://intellipk.com',
+  image_url: '/assets/projects/intellipk-homepage.png',
+  image_alt: 'IntelliPK water filtration company website homepage',
+  gallery: ['/assets/projects/intellipk-homepage.png'],
+  links: [{ label: 'Live website', href: 'https://intellipk.com' }],
+  evidence: ['Live website', 'Client business website', '0 to 1 launch'],
+  featured: true,
+  order: 4,
+  year: '2025',
+  },
+
 ];
 
 export const experience: Experience[] = [
   {
     id: 1,
+    role: 'Full-Stack Web Developer',
+    organization: 'IntelliPK',
+    location: 'Remote',
+    start: '2025',
+    end: 'Present',
+    summary:
+      'Built and launched the company website from 0 to 1 for a Pakistan-based water filtration business.',
+    highlight_list: [
+      'Built and launched intellipk.com from 0 to 1, creating the company’s first public website and professional online presence.',
+      'Worked directly with the founder from day 1 to translate business goals into site architecture, product/service pages, customer messaging, and digital strategy.',
+      'Owned responsive development, deployment, domain/hosting, technical SEO, performance, and ongoing updates to improve credibility, product discovery, and customer trust.',
+    ],
+    order: 1,
+  },
+  {
+    id: 2,
     role: 'Fullstack Developer Intern',
     organization: 'Self Justice',
     location: 'Remote',
@@ -233,14 +286,14 @@ export const experience: Experience[] = [
     end: 'May 2025',
     summary: 'Built backend and frontend features for a user-facing legal information platform.',
     highlight_list: [
-      'Built and maintained REST API features and frontend integrations.',
-      'Debugged form-submission and data-processing bottlenecks.',
-      'Worked in Agile/Scrum with code reviews, testing, and production fixes.',
+      'Built and maintained REST API features and frontend integrations for a legal information platform used by 1,500+ users.',
+      'Developed API endpoints and validation logic for legal deadline tracking, helping reduce manual tracking work.',
+      'Debugged form-submission and data-processing bottlenecks, reducing processing time by roughly 50%.',
     ],
-    order: 1,
+    order: 2,
   },
   {
-    id: 2,
+    id: 3,
     role: 'Backend Developer Intern',
     organization: 'Inwit',
     location: 'Remote',
@@ -248,14 +301,14 @@ export const experience: Experience[] = [
     end: 'Dec 2024',
     summary: 'Developed backend-driven pages and server-side features for a web platform.',
     highlight_list: [
-      'Built PHP/MVC backend features and SQL-backed workflows.',
-      'Optimized SQL queries and data access patterns.',
-      'Automated recurring server-side tasks and improved error handling.',
+      'Built PHP/MVC backend features and SQL-backed workflows for a platform serving about 5,000 monthly users.',
+      'Optimized SQL queries and data access patterns, reducing page load times by about 35%.',
+      'Automated recurring server-side tasks and improved error handling, reducing manual intervention for the team.',
     ],
-    order: 2,
+    order: 3,
   },
   {
-    id: 3,
+    id: 4,
     role: 'Vice President of Finance',
     organization: 'Code the Change YYC',
     location: 'Calgary, AB',
@@ -267,7 +320,7 @@ export const experience: Experience[] = [
       'Led budgeting for Canada-wide hackathon events with 300+ participants.',
       'Collaborated with technical and operations teams on event execution.',
     ],
-    order: 3,
+    order: 4,
   },
 ];
 
@@ -329,4 +382,9 @@ export const skills: Skill[] = [
   { id: 21, name: 'Cloud Benchmarking', category: 'tools', order: 4 },
   { id: 22, name: 'Selenium', category: 'tools', order: 5 },
   { id: 23, name: 'UI Testing', category: 'tools', order: 6 },
+  { id: 24, name: 'Responsive Design', category: 'frontend', order: 5 },
+  { id: 25, name: 'Technical SEO', category: 'frontend', order: 6 },
+  { id: 26, name: 'Deployment', category: 'tools', order: 7 },
+  { id: 27, name: 'Domain/Hosting', category: 'tools', order: 8 },
+  { id: 28, name: 'Client Communication', category: 'tools', order: 9 },
 ];
