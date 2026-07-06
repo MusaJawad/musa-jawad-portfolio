@@ -2,15 +2,15 @@ import type { Experience, Profile, Project, Skill, Testimonial } from './types';
 
 export const profile: Profile = {
   name: 'Musa Jawad',
-  title: 'Full-Stack Software Developer',
+  title: 'Backend / Full-Stack Software Engineer',
   location: 'Calgary, AB, Canada',
   email: 'musajawad72@gmail.com',
   linkedin: 'https://www.linkedin.com/in/musa-jawad-208807239',
   github: 'https://github.com/MusaJawad',
   resume: '/Musa_Jawad_Resume.pdf',
-  availability: 'Open to junior full-stack, backend, Django, automation, and data/AI roles',
+  availability: 'Open to junior backend, full-stack, .NET, Django, automation, and data/AI roles',
   intro:
-    'I build production web platforms, API-driven applications, automation tools, and data/AI projects using Python, Django, JavaScript/TypeScript, SQL, React, and Node.js. My experience includes launching a company website from 0 to 1, building backend features for user-facing platforms, and creating technical projects with OCR, WebSockets, Firebase, and distributed-systems concepts.',
+    'I build API-driven web apps, backend systems, automation tools, and data/AI projects using C#, ASP.NET Core, Python, Django, JavaScript/TypeScript, SQL, React, and Node.js. My experience includes launching a company website from 0 to 1, building secure REST APIs with authentication, and creating technical projects with OCR, WebSockets, Firebase, and distributed-systems concepts.',
 };
 
 export const projects: Project[] = [
@@ -79,6 +79,46 @@ export const projects: Project[] = [
     year: '2025',
   },
   {
+    id: 6,
+    title: 'Job Tracker API',
+    slug: 'job-tracker-api',
+    tagline:
+      'Secure ASP.NET Core Web API for tracking job applications with JWT authentication, SQLite persistence, DTOs, validation, and Swagger documentation.',
+    summary:
+      'Built a backend API for tracking job applications with user registration/login, protected CRUD endpoints, user-owned records, search/filtering, DTO-based request handling, validation rules, and persistent SQLite storage.',
+    problem:
+      'Job seekers need a simple way to organize applications, statuses, notes, and company information while keeping each user’s data private and secure.',
+    solution:
+      'Developed a C# ASP.NET Core REST API with Entity Framework Core, SQLite, JWT bearer authentication, Swagger API documentation, DTOs, validation, and user-specific data access.',
+    impact:
+      'Created a polished backend portfolio project showing authentication, database persistence, CRUD design, protected routes, API documentation, and clean request/response structure.',
+    stack: 'C#, ASP.NET Core, Entity Framework Core, SQLite, JWT Authentication, Swagger, REST APIs',
+    stack_list: [
+      'C#',
+      'ASP.NET Core',
+      'Entity Framework Core',
+      'SQLite',
+      'JWT',
+      'Swagger',
+      'REST APIs',
+    ],
+    github_url: 'https://github.com/MusaJawad/job-tracker-api',
+    demo_url: '',
+    image_url: '',
+    image_alt: 'Swagger documentation for the Job Tracker API',
+    links: [{ label: 'GitHub repository', href: 'https://github.com/MusaJawad/job-tracker-api' }],
+    evidence: [
+      'JWT register/login',
+      'Protected CRUD endpoints',
+      'User-owned data',
+      'Swagger API docs',
+      'EF Core migrations',
+    ],
+    featured: true,
+    order: 3,
+    year: '2026',
+  },
+  {
     id: 7,
     title: 'CookGPT AI Recipe Generator',
     slug: 'cookgpt-ai-recipe-generator',
@@ -106,7 +146,7 @@ export const projects: Project[] = [
     links: [],
     evidence: ['UI screenshots', 'Dashboard flow', 'Selenium test run'],
     featured: true,
-    order: 3,
+    order: 4,
     year: '2025',
   },
   {
@@ -140,7 +180,7 @@ export const projects: Project[] = [
     ],
     evidence: ['Demo video', 'Screen captures', 'Bilingual/navigation flows'],
     featured: true,
-    order: 5,
+    order: 6,
     year: '2025',
   },
   {
@@ -168,7 +208,7 @@ export const projects: Project[] = [
     ],
     evidence: ['Technical report', 'Slide deck', 'MRI result visuals'],
     featured: true,
-    order: 6,
+    order: 7,
     year: '2025',
   },
   {
@@ -193,34 +233,10 @@ export const projects: Project[] = [
     links: [{ label: 'Research report', href: '/assets/reports/cloud-ml-performance-report.pdf' }],
     evidence: ['Research report', 'Training/inference charts', 'Cloud platform comparison'],
     featured: true,
-    order: 7,
+    order: 8,
     year: '2025',
   },
-  {
-    id: 6,
-    title: 'Full-Stack Portfolio CMS',
-    slug: 'fullstack-portfolio-cms',
-    tagline: 'Django Admin + DRF + React version of this portfolio for database-backed content management.',
-    summary:
-      'Built a full-stack version of this portfolio with Django REST Framework APIs, Django Admin, models for projects/experience/skills, and a React frontend consuming the API.',
-    problem:
-      'A portfolio should be fast for recruiters, but the engineering behind it should still prove backend and admin-dashboard capability.',
-    solution:
-      'Kept the public portfolio static for instant loads while maintaining a full-stack Django CMS version as a GitHub project.',
-    impact:
-      'Separated the recruiter-facing static site from a database-backed Django/DRF portfolio CMS version with models, API endpoints, and admin editing.',
-    stack: 'Django, Django REST Framework, React, TypeScript, SQL, Django Admin',
-    stack_list: ['Django', 'DRF', 'React', 'TypeScript', 'SQL', 'Django Admin'],
-    github_url: '',
-    demo_url: '',
-    image_url: '',
-    image_alt: 'Django Admin and REST API portfolio CMS concept visual',
-    links: [],
-    evidence: ['Django models', 'Admin panel', 'REST API endpoints'],
-    featured: true,
-    order: 8,
-    year: '2026',
-  },
+
 
   {
   id: 8,
@@ -254,7 +270,7 @@ export const projects: Project[] = [
   links: [{ label: 'Live website', href: 'https://intellipk.com' }],
   evidence: ['Live website', 'Client business website', '0 to 1 launch'],
   featured: true,
-  order: 4,
+  order: 5,
   year: '2025',
   },
 
@@ -387,4 +403,14 @@ export const skills: Skill[] = [
   { id: 26, name: 'Deployment', category: 'tools', order: 7 },
   { id: 27, name: 'Domain/Hosting', category: 'tools', order: 8 },
   { id: 28, name: 'Client Communication', category: 'tools', order: 9 },
+  { id: 29, name: 'C#', category: 'backend', order: 9 },
+  { id: 30, name: 'ASP.NET Core', category: 'backend', order: 10 },
+  { id: 31, name: 'Entity Framework Core', category: 'backend', order: 11 },
+  { id: 32, name: 'JWT Authentication', category: 'backend', order: 12 },
+  { id: 33, name: 'Swagger', category: 'tools', order: 10 },
+  { id: 34, name: 'C#', category: 'backend', order: 9 },
+  { id: 35, name: 'ASP.NET Core', category: 'backend', order: 10 },
+  { id: 36, name: 'Entity Framework Core', category: 'backend', order: 11 },
+  { id: 37, name: 'JWT Authentication', category: 'backend', order: 12 },
+  { id: 38, name: 'Swagger', category: 'tools', order: 7 },
 ];

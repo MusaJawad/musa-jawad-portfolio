@@ -20,7 +20,9 @@ export function About() {
           I’m a software engineering graduate based in Calgary, focused on backend and full-stack development.
           I enjoy building practical systems with APIs, databases, automation, and clean user-facing workflows.
           My strongest interests are backend architecture, SaaS-style products, AI/data-driven tools, and game systems
-          that require real-time communication.
+          that require real-time communication.I build API-driven web apps, backend systems, automation tools, 
+          and data/AI projects using C#, ASP.NET Core, Python, Django, JavaScript/TypeScript, SQL, and React. T
+          his site collects my project walkthroughs, screenshots, reports, demo videos, and technical breakdowns in one place.
         </p>
         <p>
           Outside of coding, I work on game ideas, pixel art, and projects where I can mix technical problem-solving
