@@ -106,6 +106,7 @@ export const projects: Project[] = [
     demo_url: '',
     image_url: '',
     image_alt: 'Swagger documentation for the Job Tracker API',
+    links: [],
     evidence: [
       'JWT register/login',
       'Protected CRUD endpoints',
