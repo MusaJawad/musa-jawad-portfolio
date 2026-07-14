@@ -36,8 +36,8 @@ export default function App() {
         <section id="case-study" className="section container">
           <div className="section-kicker">Featured case study</div>
           <div className="section-headline tight-headline">
-            <h2>Distributed systems project walkthrough.</h2>
-            <p>Django proxy, replica services, WebSocket gameplay, and lag/packet-loss handling.</p>
+            <h2>DayhomeFlow Walkthrough</h2>
+            <p>C# / ASP.NET Core / Entity Framework Core / PostgreSQL</p>
           </div>
           <FeaturedCaseStudy project={featuredProject} />
         </section>
