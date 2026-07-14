@@ -2,81 +2,68 @@ import type { Experience, Profile, Project, Skill, Testimonial } from './types';
 
 export const profile: Profile = {
   name: 'Musa Jawad',
-  title: 'Backend / Full-Stack Software Engineer',
+  title: 'C# / .NET Full-Stack Software Engineer',
   location: 'Calgary, AB, Canada',
   email: 'musajawad72@gmail.com',
   linkedin: 'https://www.linkedin.com/in/musa-jawad-208807239',
   github: 'https://github.com/MusaJawad',
   resume: '/Musa_Jawad_Resume.pdf',
-  availability: 'Open to junior backend, full-stack, .NET, Django, automation, and data/AI roles',
+  availability: 'Open to junior C#/.NET, ASP.NET Core, React, full-stack, backend, and API roles',
   intro:
-    'I build API-driven web apps, backend systems, automation tools, and data/AI projects using C#, ASP.NET Core, Python, Django, JavaScript/TypeScript, SQL, React, and Node.js. My experience includes launching a company website from 0 to 1, building secure REST APIs with authentication, and creating technical projects with OCR, WebSockets, Firebase, and distributed-systems concepts.',
+    'I build production web applications, APIs, and backend systems using C#, ASP.NET Core, Entity Framework Core, PostgreSQL, React, TypeScript, Python, Django, SQL, and Docker. My work includes DayhomeFlow, a deployed full-stack platform used by real dayhome providers across Calgary, plus client website development, secure REST APIs, authentication, database-backed features, and production deployment work.',
 };
 
 export const projects: Project[] = [
   {
-    id: 1,
-    title: 'Distributed Agar.io Clone',
-    slug: 'distributed-agario-clone',
-    tagline: 'Real-time multiplayer browser game with Django, SQL, WebSockets, passive replication, and distributed-systems concepts.',
+    id: 9,
+    title: 'DayhomeFlow',
+    slug: 'dayhomeflow',
+    tagline:
+      'Production childcare management platform used by real Calgary dayhome providers, built with ASP.NET Core, React, PostgreSQL, Docker, and Excel exports.',
     summary:
-      'Built a multiplayer browser game with WebSocket-based state synchronization, server-side game updates, SQL persistence, proxy routing, replica health checks, and Lamport timestamp ordering.',
+      'Built and deployed a full-stack dayhome management platform that helps providers manage children, track attendance, maintain provider details, preview monthly records, and export Excel invoice files.',
     problem:
-      'Real-time multiplayer systems need fast state updates, consistent backend events, and a clean split between game client, proxy layer, server logic, and persistence.',
+      'Dayhome providers were manually tracking children, attendance, and monthly records across disconnected workflows, making it harder to stay organized and prepare invoice-style exports.',
     solution:
-      'Designed a layered architecture with a Phaser/TypeScript client, Django backend services, WebSocket state sync, SQL persistence, passive replication, and leader-election style failover logic for replica crashes.',
+      'Designed and built a secure React/TypeScript frontend and C# ASP.NET Core API with JWT authentication, user-owned data access, EF Core migrations, PostgreSQL production storage, SQLite local development, and Docker deployment.',
     impact:
-      'Implemented a working real-time game flow with WebSocket synchronization, SQL-backed player state, proxy routing, replica health checks, and documented failure-handling trade-offs.',
-    stack: 'Python, Django, SQL, WebSockets, TypeScript, Phaser, REST APIs',
-    stack_list: ['Python', 'Django', 'SQL', 'WebSockets', 'TypeScript', 'Phaser', 'Distributed Systems'],
-    github_url: '',
-    demo_url: '',
-    image_url: '/assets/projects/agario-architecture.webp',
-    image_alt: 'Architecture diagram from the distributed Agar.io clone report',
-    video_url: '/assets/videos/agario-showcase-captioned.mp4',
-    video_poster: '/assets/projects/agario-walkthrough-poster.jpg',
-    gallery: ['/assets/projects/agario-homepage.webp', '/assets/projects/agario-architecture.webp'],
-    links: [
-      { label: 'Technical report', href: '/assets/reports/agario-clone-report.pdf' },
-      { label: 'Captioned walkthrough', href: '/assets/videos/agario-showcase-captioned.mp4' },
+      'Deployed a production app now used by real dayhome providers across Calgary, with child management, attendance tracking, provider settings, invoice preview, Excel export, and production routing/CORS/database fixes.',
+    stack:
+      'C#, ASP.NET Core, Entity Framework Core, PostgreSQL, SQLite, React, TypeScript, JWT, Docker, Render, Vercel, ClosedXML, Swagger',
+    stack_list: [
+      'C#',
+      'ASP.NET Core',
+      'Entity Framework Core',
+      'PostgreSQL',
+      'React',
+      'TypeScript',
+      'JWT',
+      'Docker',
+      'Render',
+      'Vercel',
+      'ClosedXML',
+      'Swagger',
     ],
-    evidence: ['Captioned walkthrough', 'Gameplay screenshots', 'Architecture diagram', 'Technical report'],
+    github_url: 'https://github.com/MusaJawad/Dayhome-Flow',
+    demo_url: 'https://dayhome-flow.vercel.app',
+    image_url: '',
+    image_alt: 'DayhomeFlow dashboard and attendance management screens',
+    links: [
+      { label: 'Live app', href: 'https://dayhome-flow.vercel.app' },
+      { label: 'Backend Swagger', href: 'https://dayhome-flow-api.onrender.com/swagger' },
+      { label: 'GitHub', href: 'https://github.com/MusaJawad/Dayhome-Flow' },
+    ],
+    evidence: [
+      'Live production app',
+      'Real Calgary dayhome users',
+      'JWT authentication',
+      'PostgreSQL production database',
+      'Excel invoice export',
+      'Docker/Render/Vercel deployment',
+    ],
     featured: true,
     order: 1,
     year: '2026',
-  },
-  {
-    id: 2,
-    title: 'MediScanner',
-    slug: 'mediscanner',
-    tagline: 'OCR-powered medication lookup app with accessibility features, Firebase, external APIs, and physical image-capture hardware.',
-    summary:
-      'Built a web/mobile medication scanning system that extracts DIN/NPN values from medication images using OCR preprocessing, regex validation, Firebase auth/storage, and Canadian Drug Product Database lookup.',
-    problem:
-      'Medication labels can be hard to read or manually search, especially for elderly users or users with accessibility needs. Bad scans and small text create safety and usability issues.',
-    solution:
-      'Combined a user-facing app, OCR pipeline, API lookup workflow, accessibility features, and a physical image-capture prototype to make medication information easier to access.',
-    impact:
-      'Delivered an end-to-end medication scanning flow covering image capture, OCR validation, medication lookup, user-facing results, reminders, and saved medication screens.',
-    stack: 'React, Node.js, Firebase, PaddleOCR, Capacitor, Axios, REST APIs',
-    stack_list: ['React', 'Node.js', 'Firebase', 'PaddleOCR', 'Capacitor', 'REST APIs', 'Accessibility'],
-    github_url: '',
-    demo_url: '',
-    image_url: '/assets/projects/mediscanner-upload.webp',
-    image_alt: 'Polished MediScanner upload screen with medication image capture workflow',
-    gallery: [
-      '/assets/projects/mediscanner-login.webp',
-      '/assets/projects/mediscanner-upload.webp',
-      '/assets/projects/mediscanner-image-preview.webp',
-      '/assets/projects/mediscanner-saved.webp',
-      '/assets/projects/mediscanner-ibuprofen.webp',
-      '/assets/projects/mediscanner-reminders.webp',
-    ],
-    links: [{ label: 'Technical report', href: '/assets/reports/mediscanner-technical-report.pdf' }],
-    evidence: ['App screenshots', 'Technical report', 'OCR/API workflow'],
-    featured: true,
-    order: 2,
-    year: '2025',
   },
   {
     id: 6,
@@ -115,8 +102,110 @@ export const projects: Project[] = [
       'EF Core migrations',
     ],
     featured: true,
+    order: 2,
+    year: '2026',
+  },
+  {
+    id: 1,
+    title: 'Distributed Agar.io Clone',
+    slug: 'distributed-agario-clone',
+    tagline:
+      'Real-time multiplayer browser game with Django, SQL, WebSockets, passive replication, and distributed-systems concepts.',
+    summary:
+      'Built a multiplayer browser game with WebSocket-based state synchronization, server-side game updates, SQL persistence, proxy routing, replica health checks, and Lamport timestamp ordering.',
+    problem:
+      'Real-time multiplayer systems need fast state updates, consistent backend events, and a clean split between game client, proxy layer, server logic, and persistence.',
+    solution:
+      'Designed a layered architecture with a Phaser/TypeScript client, Django backend services, WebSocket state sync, SQL persistence, passive replication, and leader-election style failover logic for replica crashes.',
+    impact:
+      'Implemented a working real-time game flow with WebSocket synchronization, SQL-backed player state, proxy routing, replica health checks, and documented failure-handling trade-offs.',
+    stack: 'Python, Django, SQL, WebSockets, TypeScript, Phaser, REST APIs',
+    stack_list: ['Python', 'Django', 'SQL', 'WebSockets', 'TypeScript', 'Phaser', 'Distributed Systems'],
+    github_url: '',
+    demo_url: '',
+    image_url: '/assets/projects/agario-architecture.webp',
+    image_alt: 'Architecture diagram from the distributed Agar.io clone report',
+    video_url: '/assets/videos/agario-showcase-captioned.mp4',
+    video_poster: '/assets/projects/agario-walkthrough-poster.jpg',
+    gallery: ['/assets/projects/agario-homepage.webp', '/assets/projects/agario-architecture.webp'],
+    links: [
+      { label: 'Technical report', href: '/assets/reports/agario-clone-report.pdf' },
+      { label: 'Captioned walkthrough', href: '/assets/videos/agario-showcase-captioned.mp4' },
+    ],
+    evidence: ['Captioned walkthrough', 'Gameplay screenshots', 'Architecture diagram', 'Technical report'],
+    featured: true,
     order: 3,
     year: '2026',
+  },
+  {
+    id: 8,
+    title: 'IntelliPK Business Website',
+    slug: 'intellipk-business-website',
+    tagline:
+      'Production Shopify website for a Pakistan-based water filtration company, built from 0 to 1 with Liquid theme customization, responsive design, SEO, and deployment.',
+    summary:
+      'Built and launched intellipk.com as the company’s first public website using Shopify, Liquid theme customization, HTML/CSS, JavaScript, responsive design, and technical SEO basics.',
+    problem:
+      'The company needed a credible public website to explain its products and services, build customer trust, and create a professional online presence from scratch.',
+    solution:
+      'Customized a Shopify storefront with clear site architecture, product/service content, responsive layouts, theme-level styling, customer messaging, domain setup, deployment, and ongoing updates.',
+    impact:
+      'Created the company’s first public website from 0 to 1 and gave the founder a professional digital presence for product discovery, customer trust, and future ecommerce/content updates.',
+    stack: 'Shopify, Liquid, HTML/CSS, JavaScript, Responsive Design, SEO, Deployment, Domain/Hosting',
+    stack_list: [
+      'Shopify',
+      'Liquid',
+      'HTML/CSS',
+      'JavaScript',
+      'Responsive Design',
+      'SEO',
+      'Deployment',
+      'Domain/Hosting',
+    ],
+    github_url: '',
+    demo_url: 'https://intellipk.com',
+    image_url: '/assets/projects/intellipk-homepage.png',
+    image_alt: 'IntelliPK water filtration company website homepage',
+    gallery: ['/assets/projects/intellipk-homepage.png'],
+    links: [{ label: 'Live website', href: 'https://intellipk.com' }],
+    evidence: ['Live website', 'Client business website', 'Shopify/Liquid customization', '0 to 1 launch'],
+    featured: true,
+    order: 4,
+    year: '2025',
+  },
+  {
+    id: 2,
+    title: 'MediScanner',
+    slug: 'mediscanner',
+    tagline:
+      'OCR-powered medication lookup app with accessibility features, Firebase, external APIs, and physical image-capture hardware.',
+    summary:
+      'Built a web/mobile medication scanning system that extracts DIN/NPN values from medication images using OCR preprocessing, regex validation, Firebase auth/storage, and Canadian Drug Product Database lookup.',
+    problem:
+      'Medication labels can be hard to read or manually search, especially for elderly users or users with accessibility needs. Bad scans and small text create safety and usability issues.',
+    solution:
+      'Combined a user-facing app, OCR pipeline, API lookup workflow, accessibility features, and a physical image-capture prototype to make medication information easier to access.',
+    impact:
+      'Delivered an end-to-end medication scanning flow covering image capture, OCR validation, medication lookup, user-facing results, reminders, and saved medication screens.',
+    stack: 'React, Node.js, Firebase, PaddleOCR, Capacitor, Axios, REST APIs',
+    stack_list: ['React', 'Node.js', 'Firebase', 'PaddleOCR', 'Capacitor', 'REST APIs', 'Accessibility'],
+    github_url: '',
+    demo_url: '',
+    image_url: '/assets/projects/mediscanner-upload.webp',
+    image_alt: 'Polished MediScanner upload screen with medication image capture workflow',
+    gallery: [
+      '/assets/projects/mediscanner-login.webp',
+      '/assets/projects/mediscanner-upload.webp',
+      '/assets/projects/mediscanner-image-preview.webp',
+      '/assets/projects/mediscanner-saved.webp',
+      '/assets/projects/mediscanner-ibuprofen.webp',
+      '/assets/projects/mediscanner-reminders.webp',
+    ],
+    links: [{ label: 'Technical report', href: '/assets/reports/mediscanner-technical-report.pdf' }],
+    evidence: ['App screenshots', 'Technical report', 'OCR/API workflow'],
+    featured: true,
+    order: 5,
+    year: '2025',
   },
   {
     id: 7,
@@ -146,14 +235,15 @@ export const projects: Project[] = [
     links: [],
     evidence: ['UI screenshots', 'Dashboard flow', 'Selenium test run'],
     featured: true,
-    order: 4,
+    order: 6,
     year: '2025',
   },
   {
     id: 3,
     title: 'Airport Information Kiosk',
     slug: 'airport-information-kiosk',
-    tagline: 'Interactive YYC airport kiosk prototype with maps, search, flights, transport, Wi-Fi, restaurants, directions, and bilingual flows.',
+    tagline:
+      'Interactive YYC airport kiosk prototype with maps, search, flights, transport, Wi-Fi, restaurants, directions, and bilingual flows.',
     summary:
       'Built a full-screen kiosk-style application that lets airport visitors navigate maps, search airport services, check flights, view transportation options, connect to Wi-Fi, and switch language flows.',
     problem:
@@ -180,7 +270,7 @@ export const projects: Project[] = [
     ],
     evidence: ['Demo video', 'Screen captures', 'Bilingual/navigation flows'],
     featured: true,
-    order: 6,
+    order: 7,
     year: '2025',
   },
   {
@@ -208,14 +298,15 @@ export const projects: Project[] = [
     ],
     evidence: ['Technical report', 'Slide deck', 'MRI result visuals'],
     featured: true,
-    order: 7,
+    order: 8,
     year: '2025',
   },
   {
     id: 5,
     title: 'Cloud ML Performance Benchmarking',
     slug: 'cloud-ml-performance-benchmarking',
-    tagline: 'Compared CNN and GAN training performance across AWS, Google Colab, and Azure using measured training and inference metrics.',
+    tagline:
+      'Compared CNN and GAN training performance across AWS, Google Colab, and Azure using measured training and inference metrics.',
     summary:
       'Evaluated cloud platform performance for deep learning workloads by benchmarking CNN and GAN training, inference time, accuracy, and scalability-style trade-offs across multiple platforms.',
     problem:
@@ -233,47 +324,9 @@ export const projects: Project[] = [
     links: [{ label: 'Research report', href: '/assets/reports/cloud-ml-performance-report.pdf' }],
     evidence: ['Research report', 'Training/inference charts', 'Cloud platform comparison'],
     featured: true,
-    order: 8,
+    order: 9,
     year: '2025',
   },
-
-
-  {
-  id: 8,
-  title: 'IntelliPK Business Website',
-  slug: 'intellipk-business-website',
-  tagline:
-    'Production business website for a Pakistan-based water filtration company, built from 0 to 1 with responsive design, deployment, SEO, and founder-facing digital strategy.',
-  summary:
-    'Built and launched intellipk.com as the company’s first public website, helping establish a professional online presence for water filtration products and services.',
-  problem:
-    'The company needed a credible public website to explain its products and services, build trust with customers, and create a professional online presence from scratch.',
-  solution:
-    'Designed and launched a responsive website with clear site architecture, product/service content, customer messaging, domain/hosting setup, deployment, and technical SEO basics.',
-  impact:
-    'Created the company’s first public website from 0 to 1 and gave the founder a professional digital presence for product discovery, customer trust, and ongoing updates.',
-  stack: 'Web Development, Responsive Design, HTML/CSS, JavaScript, SEO, Deployment, Domain/Hosting',
-  stack_list: [
-    'Web Development',
-    'Responsive Design',
-    'HTML/CSS',
-    'JavaScript',
-    'SEO',
-    'Deployment',
-    'Domain/Hosting',
-  ],
-  github_url: '',
-  demo_url: 'https://intellipk.com',
-  image_url: '/assets/projects/intellipk-homepage.png',
-  image_alt: 'IntelliPK water filtration company website homepage',
-  gallery: ['/assets/projects/intellipk-homepage.png'],
-  links: [{ label: 'Live website', href: 'https://intellipk.com' }],
-  evidence: ['Live website', 'Client business website', '0 to 1 launch'],
-  featured: true,
-  order: 5,
-  year: '2025',
-  },
-
 ];
 
 export const experience: Experience[] = [
@@ -285,11 +338,11 @@ export const experience: Experience[] = [
     start: '2025',
     end: 'Present',
     summary:
-      'Built and launched the company website from 0 to 1 for a Pakistan-based water filtration business.',
+      'Built and launched the company’s first public Shopify website for a Pakistan-based water filtration business.',
     highlight_list: [
-      'Built and launched intellipk.com from 0 to 1, creating the company’s first public website and professional online presence.',
-      'Worked directly with the founder from day 1 to translate business goals into site architecture, product/service pages, customer messaging, and digital strategy.',
-      'Owned responsive development, deployment, domain/hosting, technical SEO, performance, and ongoing updates to improve credibility, product discovery, and customer trust.',
+      'Built and launched intellipk.com from 0 to 1 using Shopify, Liquid theme customization, HTML/CSS, and JavaScript.',
+      'Designed the site architecture, product/service pages, responsive layouts, customer messaging, and technical SEO basics.',
+      'Owned deployment, domain setup, performance checks, and ongoing updates to improve credibility, product discovery, and customer trust.',
     ],
     order: 1,
   },
@@ -340,7 +393,6 @@ export const experience: Experience[] = [
   },
 ];
 
-
 export const testimonials: Testimonial[] = [
   {
     id: 1,
@@ -375,42 +427,39 @@ export const testimonials: Testimonial[] = [
 ];
 
 export const skills: Skill[] = [
-  { id: 1, name: 'Python', category: 'backend', order: 1 },
-  { id: 2, name: 'Django', category: 'backend', order: 2 },
-  { id: 3, name: 'Django REST Framework', category: 'backend', order: 3 },
+  { id: 1, name: 'C#', category: 'backend', order: 1 },
+  { id: 2, name: 'ASP.NET Core', category: 'backend', order: 2 },
+  { id: 3, name: 'Entity Framework Core', category: 'backend', order: 3 },
   { id: 4, name: 'REST APIs', category: 'backend', order: 4 },
-  { id: 5, name: 'SQL', category: 'backend', order: 5 },
-  { id: 6, name: 'PostgreSQL', category: 'backend', order: 6 },
-  { id: 7, name: 'Node.js', category: 'backend', order: 7 },
-  { id: 8, name: 'WebSockets', category: 'backend', order: 8 },
-  { id: 9, name: 'JavaScript/TypeScript', category: 'frontend', order: 1 },
-  { id: 10, name: 'React', category: 'frontend', order: 2 },
-  { id: 11, name: 'HTML/CSS', category: 'frontend', order: 3 },
-  { id: 12, name: 'Frontend UI', category: 'frontend', order: 4 },
-  { id: 13, name: 'TensorFlow/Keras', category: 'data_ai', order: 1 },
-  { id: 14, name: 'OpenCV', category: 'data_ai', order: 2 },
-  { id: 15, name: 'NumPy', category: 'data_ai', order: 3 },
-  { id: 16, name: 'Matplotlib', category: 'data_ai', order: 4 },
-  { id: 17, name: 'OCR Pipelines', category: 'data_ai', order: 5 },
-  { id: 18, name: 'Firebase', category: 'tools', order: 1 },
-  { id: 19, name: 'Docker', category: 'tools', order: 2 },
-  { id: 20, name: 'Git/GitHub', category: 'tools', order: 3 },
-  { id: 21, name: 'Cloud Benchmarking', category: 'tools', order: 4 },
-  { id: 22, name: 'Selenium', category: 'tools', order: 5 },
-  { id: 23, name: 'UI Testing', category: 'tools', order: 6 },
-  { id: 24, name: 'Responsive Design', category: 'frontend', order: 5 },
-  { id: 25, name: 'Technical SEO', category: 'frontend', order: 6 },
-  { id: 26, name: 'Deployment', category: 'tools', order: 7 },
-  { id: 27, name: 'Domain/Hosting', category: 'tools', order: 8 },
-  { id: 28, name: 'Client Communication', category: 'tools', order: 9 },
-  { id: 29, name: 'C#', category: 'backend', order: 9 },
-  { id: 30, name: 'ASP.NET Core', category: 'backend', order: 10 },
-  { id: 31, name: 'Entity Framework Core', category: 'backend', order: 11 },
-  { id: 32, name: 'JWT Authentication', category: 'backend', order: 12 },
-  { id: 33, name: 'Swagger', category: 'tools', order: 10 },
-  { id: 34, name: 'C#', category: 'backend', order: 9 },
-  { id: 35, name: 'ASP.NET Core', category: 'backend', order: 10 },
-  { id: 36, name: 'Entity Framework Core', category: 'backend', order: 11 },
-  { id: 37, name: 'JWT Authentication', category: 'backend', order: 12 },
-  { id: 38, name: 'Swagger', category: 'tools', order: 7 },
+  { id: 5, name: 'JWT Authentication', category: 'backend', order: 5 },
+  { id: 6, name: 'SQL', category: 'backend', order: 6 },
+  { id: 7, name: 'PostgreSQL', category: 'backend', order: 7 },
+  { id: 8, name: 'Python', category: 'backend', order: 8 },
+  { id: 9, name: 'Django', category: 'backend', order: 9 },
+  { id: 10, name: 'Django REST Framework', category: 'backend', order: 10 },
+  { id: 11, name: 'Node.js', category: 'backend', order: 11 },
+  { id: 12, name: 'WebSockets', category: 'backend', order: 12 },
+  { id: 13, name: 'React', category: 'frontend', order: 1 },
+  { id: 14, name: 'JavaScript/TypeScript', category: 'frontend', order: 2 },
+  { id: 15, name: 'HTML/CSS', category: 'frontend', order: 3 },
+  { id: 16, name: 'Shopify Liquid', category: 'frontend', order: 4 },
+  { id: 17, name: 'Responsive Design', category: 'frontend', order: 5 },
+  { id: 18, name: 'Frontend UI', category: 'frontend', order: 6 },
+  { id: 19, name: 'Technical SEO', category: 'frontend', order: 7 },
+  { id: 20, name: 'TensorFlow/Keras', category: 'data_ai', order: 1 },
+  { id: 21, name: 'OpenCV', category: 'data_ai', order: 2 },
+  { id: 22, name: 'NumPy', category: 'data_ai', order: 3 },
+  { id: 23, name: 'Matplotlib', category: 'data_ai', order: 4 },
+  { id: 24, name: 'OCR Pipelines', category: 'data_ai', order: 5 },
+  { id: 25, name: 'Docker', category: 'tools', order: 1 },
+  { id: 26, name: 'Git/GitHub', category: 'tools', order: 2 },
+  { id: 27, name: 'Swagger', category: 'tools', order: 3 },
+  { id: 28, name: 'Render', category: 'tools', order: 4 },
+  { id: 29, name: 'Vercel', category: 'tools', order: 5 },
+  { id: 30, name: 'Firebase', category: 'tools', order: 6 },
+  { id: 31, name: 'Selenium', category: 'tools', order: 7 },
+  { id: 32, name: 'UI Testing', category: 'tools', order: 8 },
+  { id: 33, name: 'Deployment', category: 'tools', order: 9 },
+  { id: 34, name: 'Domain/Hosting', category: 'tools', order: 10 },
+  { id: 35, name: 'Client Communication', category: 'tools', order: 11 },
 ];
